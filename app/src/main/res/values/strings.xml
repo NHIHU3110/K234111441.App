@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">K234111441.App</string>
+    <string name="str_welcome">Welcome to K234112E</string>
+    <string name="str_hello">Say hello</string>
+    <string name="str_say_hello">Hello</string>
+    <string name="str_login_title">Login System</string>
+    <string name="str_username">User Name</string>
+    <string name="str_hint_username">Enter your username</string>
+    <string name="str_password">Password</string>
+    <string name="str_hint_password">Enter your password</string>
+    <string name="str_login">Login</string>
+    <string name="str_exit">Exit</string>
+    <string name="str_login_success">Login Successfull!</string>
+    <string name="str_login_fail">Login Failed!</string>
+</resources>
