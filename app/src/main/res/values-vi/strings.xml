@@ -4,4 +4,11 @@
     <string name="str_welcome">Xin chào K234112E</string>
     <string name="str_hello">Xin chào bạn</string>
     <string name="str_say_hello">Xin chào</string>
+    <string name="str_mc">MC</string>
+    <string name="str_mr">MR</string>
+    <string name="str_mplus">M+</string>
+    <string name="str_mminus">M-</string>
+    <string name="str_ms">MS</string>
+    <string name="str_m">M</string>
+    <string name="str_open_calculator_app">Open calculator app</string>
 </resources>

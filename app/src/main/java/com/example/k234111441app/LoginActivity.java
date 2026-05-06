@@ -45,6 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                 password.equals("123"))
         {
             txtMessage.setText(getString(R.string.str_login_success));
+            android.content.Intent intent = new android.content.Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
         else
         {

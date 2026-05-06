@@ -1,5 +1,6 @@
 package com.example.k234111441app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -37,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
         //Cái này là để qua ngôn ngữ nào cx đc, luôn làm theo cái này
         String hello=getString(R.string.str_say_hello);
         Toast.makeText(this, "Hello K234112E",Toast.LENGTH_LONG).show();
+    }
+
+    public void openCalculatorApp(View view) {
+        Intent intent=new Intent(MainActivity.this, CalculatorActivity.class);
+        startActivity(intent);
     }
 }
