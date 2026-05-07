@@ -63,9 +63,8 @@ public class CalculatorActivity extends AppCompatActivity {
         // Sự kiện quay về MainActivity
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> {
-                android.content.Intent intent = new android.content.Intent(CalculatorActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish(); // Đóng CalculatorActivity sau khi chuyển
+                // Chỉ cần finish() để quay lại màn hình trước đó trong stack
+                finish();
             });
         }
 

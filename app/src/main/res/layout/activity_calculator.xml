@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -20,18 +21,23 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
-            android:layout_width="58dp"
-            android:layout_height="58dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:backgroundTint="#FFFFFF"
-            android:text="⬅"
-            android:textColor="#3A2E00"
-            android:textSize="20sp"
-            android:padding="0dp"
+            android:insetLeft="0dp"
             android:insetTop="0dp"
+            android:insetRight="0dp"
             android:insetBottom="0dp"
-            tools:ignore="HardcodedText" />
+            android:padding="0dp"
+            app:cornerRadius="26dp"
+            app:elevation="4dp"
+            app:icon="@drawable/ic_back_arrow"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:iconTint="#3A2E00" />
 
         <LinearLayout
             android:layout_width="0dp"

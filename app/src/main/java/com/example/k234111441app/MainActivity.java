@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void close_app(View view) {
-        // Đóng màn hình hiện tại để thoát ứng dụng
-        finish();
+        // Đóng toàn bộ ứng dụng ngay lập tức
+        finishAffinity();
     }
 
     public void click_say_hello(View view) {

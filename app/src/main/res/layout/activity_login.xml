@@ -29,7 +29,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="357dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="24dp">
 
@@ -55,7 +55,6 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:text="admin"
                     android:id="@+id/edtUserName"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -66,6 +65,7 @@
                     android:inputType="text"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
+                    android:text="admin"
                     android:textColor="#202124"
                     android:textColorHint="#9AA0A6"
                     android:textSize="16sp" />
@@ -80,20 +80,36 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtPassword"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
-                    android:background="#F1F3F4"
-                    android:ems="10"
-                    android:hint="@string/str_hint_password"
-                    android:inputType="textPassword"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textColor="#202124"
-                    android:textColorHint="#9AA0A6"
-                    android:textSize="16sp" />
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#1976D2"
+                    app:boxBackgroundMode="none">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="#F1F3F4"
+                        android:hint="@string/str_hint_password"
+                        android:inputType="textPassword"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="48dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#202124"
+                        android:textColorHint="#9AA0A6"
+                        android:textSize="16sp"
+                        android:includeFontPadding="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chkSaveLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="@string/str_save_login_info" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -136,6 +152,7 @@
                     android:textColor="#009688"
                     android:textSize="16sp"
                     android:textStyle="italic" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

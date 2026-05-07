@@ -11,4 +11,5 @@
     <string name="str_ms">MS</string>
     <string name="str_m">M</string>
     <string name="str_open_calculator_app">Open calculator app</string>
+    <string name="str_save_login_info">Save login information</string>
 </resources>
