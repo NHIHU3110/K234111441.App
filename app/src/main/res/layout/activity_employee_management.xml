@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".EmployeeManagementActivity">
+
+    <!-- Swiss Style Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_swiss_header"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:letterSpacing="0.05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_swiss_subheader"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:letterSpacing="0.2"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="#000000"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/edt_id"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="@string/str_id_hint"
+                android:background="@null"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:importantForAutofill="no" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#000000" android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="@string/str_name_hint"
+                android:background="@null"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:importantForAutofill="no" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#000000" android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="@string/str_phone_hint"
+                android:background="@null"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:importantForAutofill="no" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#000000" android:layout_marginBottom="32dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_btn_save_caps"
+                    android:backgroundTint="#000000"
+                    android:textColor="#FFFFFF"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="0dp"
+                    android:layout_marginEnd="4dp"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_btn_remove_caps"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:id="@+id/btn_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="@string/str_btn_exit_caps"
+                    android:backgroundTint="#EEEEEE"
+                    android:textColor="#000000"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="0dp"
+                    android:layout_marginStart="4dp"
+                    style="?android:attr/buttonBarButtonStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_swiss_registry"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:letterSpacing="0.1"/>
+
+    <ListView
+        android:id="@+id/lv_employees"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#EEEEEE"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

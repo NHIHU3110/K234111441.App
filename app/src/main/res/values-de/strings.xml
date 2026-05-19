@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">K234111441.App</string>
-    <string name="str_welcome">Hallo K234112E</string>
-    <string name="str_hello">Hallo!</string>
-    <string name="str_say_hello">Guten Tag</string>
+    <string name="str_welcome">Willkommen bei K234112E</string>
+    <string name="str_hello">Sag Hallo</string>
+    <string name="str_say_hello">Hallo</string>
+    <string name="str_login_title">Anmeldesystem</string>
+    <string name="str_username">Benutzername</string>
+    <string name="str_hint_username">Geben Sie Ihren Benutzernamen ein</string>
+    <string name="str_password">Passwort</string>
+    <string name="str_hint_password">Geben Sie Ihr Passwort ein</string>
+    <string name="str_login">Einloggen</string>
+    <string name="str_exit">Beenden</string>
+    <string name="str_exit_title">Beenden xác nhận</string>
+    <string name="str_exit_msg">Sind Sie sicher, dass Sie beenden möchten?</string>
+    <string name="str_yes">Ja</string>
+    <string name="str_no">Nein</string>
+    <string name="str_login_success">Anmeldung erfolgreich!</string>
+    <string name="str_login_fail">Anmeldung fehlgeschlagen!</string>
+    <string name="str_mc">MC</string>
+    <string name="str_mr">MR</string>
+    <string name="str_mplus">M+</string>
+    <string name="str_mminus">M-</string>
+    <string name="str_ms">MS</string>
+    <string name="str_m">M</string>
+    <string name="str_open_calculator_app">Rechner öffnen</string>
+    <string name="str_error">Fehler</string>
+    <string name="str_expression_error">Ausdrucksfehler!</string>
+    <string name="str_mem_cleared">Speicher gelöscht</string>
+    <string name="str_mem_stored">Speicher gespeichert</string>
+    <string name="str_error_negative">Fehler: Negative Zahl!</string>
+    <string name="str_error_div_zero">Fehler: Division durch Null!</string>
+    <string name="str_error_generic">Fehler!</string>
+    <string name="str_save_login_info">Anmeldedaten speichern</string>
+    <string name="str_save_history">Verlauf speichern</string>
+    <string name="str_login_role">Anmelderolle</string>
+    <string name="str_role_admin">Admin</string>
+    <string name="str_role_employee">Mitarbeiter</string>
 </resources>

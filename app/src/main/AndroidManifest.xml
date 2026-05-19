@@ -23,30 +23,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.K234111441App">
-
+        <activity
+            android:name=".EmployeeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeAdvancedManagementActivity"
+            android:exported="false" />
         <!-- Màn hình đăng nhập chạy đầu tiên -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop" />
-
         <activity
             android:name=".CalculatorActivity"
             android:exported="true" />
-
         <activity
             android:name=".FrameLayoutActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

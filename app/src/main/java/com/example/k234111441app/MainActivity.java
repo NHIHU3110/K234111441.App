@@ -26,22 +26,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void say_hello(View view) {
-        Toast.makeText(this, "Hellu Nhi nè",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Hellu Nhi nè", Toast.LENGTH_LONG).show();
     }
 
     public void close_app(View view) {
-        // Đóng toàn bộ ứng dụng ngay lập tức
         finishAffinity();
     }
 
     public void click_say_hello(View view) {
-        //Cái này là để qua ngôn ngữ nào cx đc, luôn làm theo cái này
-        String hello=getString(R.string.str_say_hello);
-        Toast.makeText(this, "Hello K234112E",Toast.LENGTH_LONG).show();
+        String hello = getString(R.string.str_say_hello);
+        Toast.makeText(this, hello + " K234112E", Toast.LENGTH_LONG).show();
     }
 
     public void openCalculatorApp(View view) {
-        Intent intent=new Intent(MainActivity.this, CalculatorActivity.class);
+        Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void openEmployeeAdvanced(View view) {
+        Intent intent = new Intent(MainActivity.this, EmployeeAdvancedManagementActivity.class);
         startActivity(intent);
     }
 }

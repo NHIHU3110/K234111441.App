@@ -3,6 +3,7 @@ package com.example.k234111441app;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class CalculatorActivity extends AppCompatActivity {
     Button btnDel, btnEqual, btnBack;
     TextView txtMC, txtMR, txtMplus, txtMminus, txtMS, txtM;
 
+    private String name_share_pref = "CalcData";
     private double memoryValue = 0;
     private boolean isResultDisplayed = false;
 
@@ -41,11 +43,35 @@ public class CalculatorActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // LUÔN TỰ ĐỘNG TẢI: Không cần kiểm tra biến saved
+        android.content.SharedPreferences pref = getSharedPreferences(name_share_pref, MODE_PRIVATE);
+        String lastFormula = pref.getString("last_formula", "");
+        
+        if (!lastFormula.isEmpty()) {
+            edtFormula.setText(lastFormula);
+            isResultDisplayed = true;
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // LUÔN TỰ ĐỘNG LƯU: Ngay khi rời màn hình là lưu lại ngay
+        android.content.SharedPreferences pref = getSharedPreferences(name_share_pref, MODE_PRIVATE);
+        android.content.SharedPreferences.Editor editor = pref.edit();
+        editor.putString("last_formula", edtFormula.getText().toString());
+        editor.apply();
+    }
+
     private void addViews() {
         edtFormula = findViewById(R.id.editFomula);
         btnDel = findViewById(R.id.btnDel);
         btnEqual = findViewById(R.id.btnEqual);
         btnBack = findViewById(R.id.btnBack);
+
         // Ánh xạ các nút nhớ
         txtMC = findViewById(R.id.txtMC);
         txtMR = findViewById(R.id.txtMR);
@@ -139,6 +165,13 @@ public class CalculatorActivity extends AppCompatActivity {
             double result = evaluate(formula);
             displayResult(result);
             isResultDisplayed = true;
+
+            // LUÔN TỰ ĐỘNG LƯU KHI TÍNH XONG
+            android.content.SharedPreferences preferences = getSharedPreferences(name_share_pref, MODE_PRIVATE);
+            android.content.SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("last_formula", edtFormula.getText().toString());
+            editor.apply();
+
         } catch (Exception e) {
             Toast.makeText(this, getString(R.string.str_expression_error), Toast.LENGTH_SHORT).show();
         }

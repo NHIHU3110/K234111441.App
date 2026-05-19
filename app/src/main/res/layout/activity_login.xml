@@ -83,32 +83,66 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
+                    app:boxBackgroundMode="none"
                     app:hintEnabled="false"
                     app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="#1976D2"
-                    app:boxBackgroundMode="none">
+                    app:passwordToggleTint="#1976D2">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:background="#F1F3F4"
+                        android:gravity="center_vertical"
                         android:hint="@string/str_hint_password"
+                        android:includeFontPadding="false"
                         android:inputType="textPassword"
                         android:paddingStart="16dp"
                         android:paddingEnd="48dp"
-                        android:gravity="center_vertical"
                         android:textColor="#202124"
                         android:textColorHint="#9AA0A6"
-                        android:textSize="16sp"
-                        android:includeFontPadding="false" />
+                        android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_login_role"
+                    android:textColor="#5F6368"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/radAdmin"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/str_role_admin" />
+
+                    <RadioButton
+                        android:id="@+id/radUser"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="@string/str_role_employee" />
+                </RadioGroup>
 
                 <CheckBox
                     android:id="@+id/chkSaveLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="32dp"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="16dp"
                     android:text="@string/str_save_login_info" />
 
                 <LinearLayout
