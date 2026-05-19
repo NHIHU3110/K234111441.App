@@ -45,37 +45,126 @@
     <string name="check_exit">Do you want to exit?</string>
     <string name="str_employee_info">Thông tin nhân viên</string>
     <string name="str_employee_list">Danh sách nhân viên</string>
-    <string name="str_swiss_header">EMPLOYEE</string>
-    <string name="str_swiss_subheader">MANAGEMENT SYSTEM</string>
-    <string name="str_swiss_registry">REGISTRY</string>
+
+    <!-- Old Employee Management Strings (for backward compatibility) -->
     <string name="str_id_hint">ID</string>
     <string name="str_name_hint">FULL NAME</string>
     <string name="str_phone_hint">PHONE NUMBER</string>
-    <string name="str_btn_save_caps">SAVE</string>
-    <string name="str_btn_delete_caps">DELETE</string>
-    <string name="str_btn_exit_caps">EXIT</string>
     <string name="str_confirm_title">CONFIRMATION</string>
-    <string name="str_yes_caps">YES</string>
-    <string name="str_no_caps">NO</string>
     <string name="str_proceed">PROCEED</string>
     <string name="str_cancel">CANCEL</string>
+    <string name="str_delete_confirm_title">Xác nhận xóa</string>
+    <string name="str_delete_confirm_msg">Bạn có chắc chắn muốn xóa không?</string>
+    <string name="str_delete_success">Xóa thành công!</string>
+    <string name="str_select_to_delete">Vui lòng chọn nhân viên để xóa!</string>
+    <string name="str_id_exists_update">Mã nhân viên đã tồn tại ở người khác!</string>
+    <string name="str_update_success">Cập nhật thành công!</string>
+    <string name="str_id_exists">Mã nhân viên đã tồn tại!</string>
+    <string name="str_add_success">Thêm nhân viên thành công!</string>
+
+    <!-- Swiss Design Strings -->
+    <string name="str_swiss_header">EMPLOYEE</string>
+    <string name="str_swiss_subheader">MANAGEMENT SYSTEM</string>
+    <string name="str_swiss_registry">REGISTRY</string>
+    <string name="str_id_hint_caps">ID</string>
+    <string name="str_name_hint_caps">FULL NAME</string>
+    <string name="str_phone_hint_caps">PHONE NUMBER</string>
+    <string name="str_btn_save_caps">SAVE</string>
     <string name="str_btn_remove_caps">REMOVE</string>
+    <string name="str_btn_update_caps">UPDATE</string>
+    <string name="str_btn_exit_caps">EXIT SYSTEM</string>
+    <string name="str_btn_reset_caps">RESET</string>
+    <string name="str_swiss_label_id">IDENTIFICATION</string>
+    <string name="str_swiss_label_name">FULL NAME</string>
+    <string name="str_swiss_label_contact">CONTACT</string>
+    <string name="str_swiss_label_dept">DEPARTMENT</string>
+    <string name="str_swiss_label_pob">PLACE OF BIRTH</string>
+
+    <!-- Messages & Alerts (Newer) -->
     <string name="str_msg_id_exists">ID nhân viên đã tồn tại!</string>
     <string name="str_msg_delete_confirm">Bạn có chắc chắn muốn xóa nhân viên này không?</string>
     <string name="str_msg_delete_success">Đã xóa thành công</string>
     <string name="str_msg_select_to_delete">Vui lòng chọn một nhân viên để xóa</string>
     <string name="str_msg_update_success">Đã cập nhật thông tin</string>
     <string name="str_msg_add_success">Đã thêm nhân viên mới</string>
+    <string name="str_invalid_phone">Số điện thoại không hợp lệ (phải có 10 chữ số)!</string>
     <string name="str_confirm_delete">XÁC NHẬN XÓA</string>
     <string name="str_input_full_info">Vui lòng nhập đầy đủ thông tin!</string>
-    <string name="str_id_exists">Mã nhân viên đã tồn tại!</string>
-    <string name="str_add_success">Thêm nhân viên thành công!</string>
     <string name="str_select_to_update">Vui lòng chọn nhân viên để cập nhật!</string>
-    <string name="str_id_exists_update">Mã nhân viên đã tồn tại ở người khác!</string>
-    <string name="str_update_success">Cập nhật thành công!</string>
-    <string name="str_select_to_delete">Vui lòng chọn nhân viên để xóa!</string>
-    <string name="str_delete_confirm_title">Xác nhận xóa</string>
-    <string name="str_delete_confirm_msg">Bạn có chắc chắn muốn xóa không?</string>
-    <string name="str_delete_success">Xóa thành công!</string>
-    <string name="str_login_failed">Đăng nhập thất bại!</string>
+    <string name="str_no_emp_found">No employees found</string>
+    <string name="str_search_hint">Search employee...</string>
+    <string name="str_filter_all">-- ALL DEPARTMENTS --</string>
+    <string name="str_filter_by">FILTER BY:</string>
+    <string name="str_menu_edit">Chỉnh sửa</string>
+    <string name="str_menu_delete">Xóa nhân viên</string>
+    <string name="str_pob_hint_caps">PLACE OF BIRTH</string>
+    <string name="str_btn_details_caps">DETAILS</string>
+    <string name="str_btn_back_caps">BACK</string>
+    <string name="str_btn_edit_profile_caps">EDIT PROFILE</string>
+
+    <string-array name="vietnam_provinces">
+        <item>An Giang</item>
+        <item>Bà Rịa – Vũng Tàu</item>
+        <item>Bắc Giang</item>
+        <item>Bắc Kạn</item>
+        <item>Bạc Liêu</item>
+        <item>Bắc Ninh</item>
+        <item>Bến Tre</item>
+        <item>Bình Định</item>
+        <item>Bình Dương</item>
+        <item>Bình Phước</item>
+        <item>Bình Thuận</item>
+        <item>Cà Mau</item>
+        <item>Cần Thơ</item>
+        <item>Cao Bằng</item>
+        <item>Đà Nẵng</item>
+        <item>Đắk Lắk</item>
+        <item>Đắk Nông</item>
+        <item>Điện Biên</item>
+        <item>Đồng Nai</item>
+        <item>Đồng Tháp</item>
+        <item>Gia Lai</item>
+        <item>Hà Giang</item>
+        <item>Hà Nam</item>
+        <item>Hà Nội</item>
+        <item>Hà Tĩnh</item>
+        <item>Hải Dương</item>
+        <item>Hải Phòng</item>
+        <item>Hậu Giang</item>
+        <item>Hòa Bình</item>
+        <item>Hưng Yên</item>
+        <item>Khánh Hòa</item>
+        <item>Kiên Giang</item>
+        <item>Kon Tum</item>
+        <item>Lai Châu</item>
+        <item>Lâm Đồng</item>
+        <item>Lạng Sơn</item>
+        <item>Lào Cai</item>
+        <item>Long An</item>
+        <item>Nam Định</item>
+        <item>Nghệ An</item>
+        <item>Ninh Bình</item>
+        <item>Ninh Thuận</item>
+        <item>Phú Thọ</item>
+        <item>Phú Yên</item>
+        <item>Quảng Bình</item>
+        <item>Quảng Nam</item>
+        <item>Quảng Ngãi</item>
+        <item>Quảng Ninh</item>
+        <item>Quảng Trị</item>
+        <item>Sóc Trăng</item>
+        <item>Sơn La</item>
+        <item>Tây Ninh</item>
+        <item>Thái Bình</item>
+        <item>Thái Nguyên</item>
+        <item>Thanh Hóa</item>
+        <item>Thừa Thiên Huế</item>
+        <item>Tiền Giang</item>
+        <item>TP Hồ Chí Minh</item>
+        <item>Trà Vinh</item>
+        <item>Tuyên Quang</item>
+        <item>Vĩnh Long</item>
+        <item>Vĩnh Phúc</item>
+        <item>Yên Bái</item>
+    </string-array>
 </resources>

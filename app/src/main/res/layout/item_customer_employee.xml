@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="18dp">
+
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMP001"
+            android:textSize="10sp"
+            android:textColor="@color/swiss_red"
+            android:textStyle="bold"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:letterSpacing="-0.02"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0123456789"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/txtDept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEPARTMENT"
+            android:textSize="11sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- Nút bấm phong cách Block Swiss -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgCall"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:foreground="?attr/selectableItemBackground"
+            android:contentDescription="Call"
+            android:padding="22dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_call_swiss"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/imgSms"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:background="@color/swiss_red"
+            android:foreground="?attr/selectableItemBackground"
+            android:contentDescription="SMS"
+            android:padding="22dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sms_swiss"
+            app:tint="@color/white" />
+    </LinearLayout>
+</LinearLayout>

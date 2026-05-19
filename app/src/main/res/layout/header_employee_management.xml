@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Search & Filter Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="@color/swiss_grey_light"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:hint="@string/str_search_hint"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="13sp"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawableEnd="@android:drawable/ic_menu_close_clear_cancel"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/black"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FILTER BY:"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spFilterDept"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/spinner_background"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Compact Form Section -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_swiss_label_id"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#999999" />
+                <EditText
+                    android:id="@+id/edtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:hint="@string/str_id_hint_caps"
+                    android:inputType="text"
+                    android:importantForAutofill="no" />
+                <View android:layout_width="match_parent" android:layout_height="2dp" android:background="@color/black" />
+            </LinearLayout>
+
+            <Space android:layout_width="16dp" android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_swiss_label_name"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#999999" />
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:hint="@string/str_name_hint_caps"
+                    android:inputType="textPersonName"
+                    android:importantForAutofill="no" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_swiss_label_contact"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#999999" />
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:hint="@string/str_phone_hint_caps"
+                android:inputType="phone"
+                android:importantForAutofill="no" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_swiss_label_pob"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#999999" />
+                <AutoCompleteTextView
+                    android:id="@+id/edtPOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:hint="@string/str_pob_hint_caps"
+                    android:inputType="text"
+                    android:completionThreshold="1"
+                    android:importantForAutofill="no" />
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/black" />
+            </LinearLayout>
+
+            <Space android:layout_width="16dp" android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_swiss_label_dept"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#999999" />
+                <Spinner
+                    android:id="@+id/spDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/spinner_background"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Buttons Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_btn_save_caps"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="@string/str_btn_update_caps"
+                android:backgroundTint="@color/swiss_grey_dark"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="@string/str_btn_remove_caps"
+                android:backgroundTint="@color/swiss_red"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp"
+                app:elevation="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="@string/str_btn_reset_caps"
+                android:backgroundTint="@color/swiss_grey_light"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp"
+                app:elevation="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="20dp"
+        android:text="@string/str_no_emp_found"
+        android:textColor="@color/swiss_red"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <View android:layout_width="match_parent" android:layout_height="4dp" android:background="@color/black" />
+</LinearLayout>
